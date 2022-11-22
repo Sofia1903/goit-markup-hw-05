@@ -45,6 +45,8 @@ body {
     padding-bottom: 6px;
     padding-left: 22px;
     padding-right: 22px;
+  
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button {
@@ -74,6 +76,7 @@ button:focus {
     display: block;
     border: none;
     border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons:hover,
@@ -107,6 +110,7 @@ a {
 .contacts a {
     color: var(--text-color);
     font-style: normal;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts a:hover,
@@ -144,13 +148,18 @@ header {
 
 .site-nav .link.current {
     color: var(--a-color);
+
 }
 
+.link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .header-li {
     padding: 32px 0;
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: 0.02em;
+    
 }
 
 .site-nav a:hover,
@@ -163,6 +172,7 @@ header {
     gap: 50px;
     align-items: center;
     margin-left: 93px;
+   
 }
 
 /* text */
@@ -272,6 +282,7 @@ footer {
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
+   
 }
 
 .studio-logo {
@@ -518,6 +529,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    
+}
+.cards-img:hover::before {
+    transform: translateY(400px);
 }
 .projects {
     display: flex;
@@ -561,6 +577,7 @@ img {
 .header-a {
     display: flex;
     align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icons-ul {
@@ -614,14 +631,18 @@ img {
     width: 100%;
     height: 100%;
     fill: var(--icon-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-a:hover {
     background-color: var(--a-color);
     border-radius: 50%;
     fill: var(--heading-color);
+    
 }
-
+.cards-link {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .cards-link:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     display: inline-block;
@@ -631,8 +652,7 @@ img {
 .footer-join-link {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-
-
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-join-link:hover {
@@ -677,6 +697,10 @@ img {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
 }
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
 .modal {
     position: absolute;
     top: 50%;
@@ -689,16 +713,32 @@ img {
     border-radius: 4px;
   
 }
-.modal-link {
-  
-   border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
+.close {
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     width: 30px;
     height: 30px;
-   
+    background-color: var(--heading-color);
+    border-radius: 50%;
+    padding: 0;
+    right: 8px;
+    top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .modal-svg {
-    background-color: var(--heading-color);
-    
-   
+    width: 18px;
+    height: 18px;
+}
+
+
+.link.current::after {
+    width: 78px;
+    height: 4px;
+    color: var(--a-color);
+    padding: 10px 20px;
+    outline: 2px;
+    background: #2196F3;
+    border-radius: 2px;
 }
