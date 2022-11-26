@@ -758,7 +758,7 @@ img {
 
 
 
-/* Practice */
+
 
 .product {
     
@@ -781,7 +781,7 @@ img {
     margin-bottom: 0;
 }
 
-.product-actions {
+.product-p {
    position: absolute;
    
    display: flex;
@@ -792,7 +792,7 @@ img {
    /* transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
-.product-actions .icon {
+.product-p .icon {
     
     width: 32px;
     height: 32px;
@@ -803,7 +803,7 @@ img {
     overflow: hidden;
 }
 
-.product-overlay {
+.cards-overlay {
     position: absolute;
  
     width: 370px;
@@ -816,7 +816,7 @@ img {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.product:hover .product-actions {
+.product:hover .product-p {
     opacity: 1;
 }
 
@@ -824,7 +824,7 @@ img {
     /* opacity: 1; */
 }
 
-.cards-link:hover .product-overlay {
+.cards-link:hover .cards-overlay {
    transform: translateY(0);
    opacity: 1;
    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
