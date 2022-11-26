@@ -46,7 +46,7 @@ body {
     padding-left: 22px;
     padding-right: 22px;
   
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button {
@@ -149,7 +149,7 @@ header {
 .site-nav .link.current {
     color: var(--a-color);
     position: relative;
-
+    padding-bottom: 32px;
 }
 .site-nav .link.current::after {
     content: " ";
@@ -159,7 +159,7 @@ header {
     display: block;
     width: 100%;
     height: 4px;
-    top: 45px;
+   
     background: #2196F3;
     
     border-radius: 2px;
@@ -628,14 +628,13 @@ img {
     align-items: center;
     justify-content: center;
     fill: var(--icon-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-link:hover {
+.clients-link:hover, .clients-link:focus {
     fill: var(--a-color);
     border: 1px solid var(--a-color);
-    border-radius: 4px;
-
+   
 }
 
 .team-a {
@@ -644,20 +643,21 @@ img {
     justify-content: center;
     width: 100%;
     height: 100%;
+    border-radius: 50%;
     fill: var(--icon-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-a:hover {
+.team-a:hover, .team-a:focus {
     background-color: var(--a-color);
-    border-radius: 50%;
+    
     fill: var(--heading-color);
     
 }
 .cards-link {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.cards-link:hover {
+.cards-link:hover,  .cards-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     display: inline-block;
 
@@ -669,9 +669,9 @@ img {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-join-link:hover {
+.footer-join-link:hover, .footer-join-link:focus {
     background-color: var(--a-color);
-    border-radius: 50%;
+   
 }
 
 
@@ -696,7 +696,7 @@ img {
 }
 .work-p-div {
     position: absolute;
-    top: 224px;
+    bottom: 0;
 }
 
 
